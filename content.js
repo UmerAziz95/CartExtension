@@ -178,7 +178,7 @@ function extractItemsFromPageText(bodyText) {
     if (/^\s*(Subtotal|Shipping|Tax|Total|Discount|Item Value|Cost summary)/i.test(snippet)) continue;
 
     let name = snippet
-      .replace(/^(?:Product image\s*)?(?:Description\s*)?(?:Quantity\s*Price\s*)?(?:Quantity|Qty)\s*[:x]?\s*\d+\s*/i, '')
+      .replace(/^(?:Order summary\s*)?(?:Shopping cart\s*)?(?:Product image\s*)?(?:Description\s*)?(?:Quantity\s*Price\s*)?(?:Quantity|Qty)\s*[:x]?\s*\d+\s*/i, '')
       .replace(/\s*(Quantity|Qty)\s*[:x]?\s*\d*$/i, '')
       .trim();
     const trailingNum = name.match(/\s+(\d+)\s*$/);
